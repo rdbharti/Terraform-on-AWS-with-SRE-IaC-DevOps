@@ -36,3 +36,5 @@ terraform.rc
 # Ignore key-pair
 *.pem
 *.ppk
+
+.terraform.lock.hcl
