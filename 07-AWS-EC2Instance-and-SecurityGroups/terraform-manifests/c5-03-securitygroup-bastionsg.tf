@@ -21,6 +21,6 @@ module "public_bastion_sg" {
   # Egress Rule - all-all open for
 
   egress_rules = ["all-all"]
-  tags         = local.comman_tags
+  tags         = local.common_tags
 }
 
