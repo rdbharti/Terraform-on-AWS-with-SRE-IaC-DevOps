@@ -3,7 +3,7 @@
         "@saveall": true
     },
     "extensions": {
-        "@aws.profile": "",
+        "@aws.profile": "profile:default",
         "@editor.acceptSuggestionOnEnter": "on",
         "@editor.snippetSuggestions": "top",
         "@editor.suggest.preview": true,
