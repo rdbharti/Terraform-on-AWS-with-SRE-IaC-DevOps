@@ -125,7 +125,7 @@ resource "aws_iam_role" "cw_canary_iam_role" {
       }
     ]
   })
-  managed_policy_arnn = [aws_iam_policy.cw_canary_iam_policy.arn]
+  managed_policy_arns = [aws_iam_policy.cw_canary_iam_policy.arn]
 
 }
 
@@ -143,7 +143,7 @@ resource "aws_s3_bucket" "cw_canary_bucket" {
 
 
 # AWS CloudWatch Canary
-resource "aws_sythetics_canary" "sswebsite2"{
+resource "aws_synthetics_canary" "sswebsite2"{
    name                 = "ssswebsite2"
   artifact_s3_location = "s3://${aws_s3_bucket.cw_canary_bucket.id}/sswebsite2"
   execution_role_arn   = aws_iam_role.cw_canary_iam_role.arn

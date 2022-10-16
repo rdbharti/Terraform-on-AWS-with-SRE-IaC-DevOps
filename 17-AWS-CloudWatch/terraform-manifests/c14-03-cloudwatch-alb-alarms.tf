@@ -9,7 +9,7 @@ resource "aws_cloudwatch_metric_alarm" "alb_4xx_errors" {
   period              = "120"
   statistic           = "Sum"
   threshold           = "5" # real-world values are like 100, 200 etc
-  treat_misiisng_data = "missing"
+  treat_missing_data = "missing"
 
   dimensions = {
     LoadBalancer = module.alb.lb_arn_suffix

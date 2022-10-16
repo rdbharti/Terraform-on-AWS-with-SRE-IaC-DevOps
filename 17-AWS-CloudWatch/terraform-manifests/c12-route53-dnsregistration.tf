@@ -4,8 +4,8 @@ resource "aws_route53_record" "apps_dns" {
   name    = "cloudwatch.ranadurlabh.in"
   type    = "A"
   alias {
-    name                   = module.nlb.lb_dns_name
-    zone_id                = module.nlb.lb_zone_id
+    name                   = module.alb.lb_dns_name
+    zone_id                = module.alb.lb_zone_id
     evaluate_target_health = true
   }
 }
