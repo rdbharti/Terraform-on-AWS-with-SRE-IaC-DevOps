@@ -29,7 +29,7 @@ resource "aws_autoscaling_schedule" "increase_capacity_9am" {
   min_size               = 1
   max_size               = 5
   desired_capacity       = 3
-  start_time             = "2022-10-14T02:30:00Z"
+  start_time             = "2023-10-14T02:30:00Z"
   # end_time               = "2016-12-12T06:00:00Z"
   recurrence = "00 09 * * *"
   autoscaling_group_name = module.autoscaling.autoscaling_group_id
@@ -41,7 +41,7 @@ resource "aws_autoscaling_schedule" "decrease_capacity_9pm" {
   min_size               = 1
   max_size               = 5
   desired_capacity       = 1
-  start_time             = "2022-10-15T03:30:00Z"
+  start_time             = "2023-10-15T03:30:00Z"
   # end_time               = "2016-12-12T06:00:00Z"
   recurrence = "00 21 * * *"
   autoscaling_group_name = module.autoscaling.autoscaling_group_id
